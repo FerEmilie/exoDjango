@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>calcul</title>
+  </head>
+  <body>
+    <h1>Ma super calculatrice</h1>
+
+<p>{{ nombre1 }} + {{ nombre2 }}, ça fait <strong>{{ total }}</strong> !<br />
+
+Nous pouvons également calculer la somme dans le template : {{ nombre1|add:nombre2 }}.</p>
+{% load static %}
+
+<img src="{% static 'gestionDesPlats/restau.png' %}" alt="Mon image" />
+
+  </body>
+</html>
