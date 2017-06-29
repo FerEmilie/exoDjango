@@ -1,27 +1,18 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <h1>Bienvenu</h1>
-    {% for plat in plats %}
+<h1>Bienvenue sur la gestion des plats!</h1>
 
-        <div class="plat">
+{% for plat in dernier_plat%}
 
-            <h3>{{ plat.nom }}</h3>
+    <div class="plat">
 
-            <p>{{ plat.prix}}</p>
+        <h3>{{ plat.nom }}</h3>
 
-            <!-- <p><a href="{% url 'lire' article.id %}">Lire la suite</a> -->
+        <p>{{ plat.prix }}</p>
+        <p><a href="{% url 'lire' plat.id %}">Lire la suite</a>
 
-        </div>
+    </div>
 
-    {% empty %}
+{% empty %}
 
-        <p>Aucun plat.</p>
+    <p>Aucun plat.</p>
 
-    {% endfor %}
-  </body>
-</html>
+{% endfor %}

@@ -14,5 +14,23 @@ Nous pouvons également calculer la somme dans le template : {{ nombre1|add:nomb
 
 <img src="{% static 'gestionDesPlats/restau.png' %}" alt="Mon image" />
 
+<h1>Bienvenue sur la gestion des plats!</h1>
+
+{% for plat in dernier_plat%}
+
+    <div class="plat">
+
+        <h3>{{ plat.nom }}</h3>
+
+        <p>{{ plat.prix }}</p>
+
+    </div>
+
+{% empty %}
+
+    <p>Aucun plat.</p>
+
+{% endfor %}
+
   </body>
 </html>
